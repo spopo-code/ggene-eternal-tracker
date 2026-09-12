@@ -6,8 +6,11 @@
   "scripts": {
     "check": "node scripts/check-updates.mjs",
     "check-x": "node scripts/check-x.mjs",
+    "check-youtube": "node scripts/check-youtube.mjs",
+    "weekly-trend": "node scripts/weekly-trend.mjs",
+    "history-stats": "node scripts/history-stats.mjs",
     "build": "node scripts/build-site.mjs",
-    "run-all": "npm run check && npm run check-x && npm run build"
+    "run-all": "npm run check && npm run check-x && npm run check-youtube && npm run weekly-trend && npm run history-stats && npm run build"
   },
   "engines": {
     "node": ">=20"
