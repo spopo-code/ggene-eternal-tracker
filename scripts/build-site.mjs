@@ -70,7 +70,6 @@ async function main() {
   .card { background: #1b1e26; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
   .meta { font-size: 0.75rem; color: #8ab4f8; margin-bottom: 6px; }
   .ai-comment { font-size: 0.85rem; color: #cbd5e1; background: #262b36; border-radius: 6px; padding: 8px 10px; margin: 6px 0; }
-  .ai-comment::before { content: "AIによる推測: "; color: #f5a623; font-weight: 600; }
   a { color: #8ab4f8; text-decoration: none; font-size: 0.9rem; }
   a:hover { text-decoration: underline; }
 </style>
@@ -81,8 +80,7 @@ async function main() {
     本サイトはBandai Namco・atwiki運営・X Corpとは無関係の個人プロジェクトです。
     有志Wiki(著作権は当該Wikiに帰属)の「更新情報」は機械的に検知して通知するのみで本文は転載していません。
     X投稿はX公式の埋め込み機能(oEmbed)をそのまま利用し、画像加工や文章の改変は行っていません。
-    「AIによる推測コメント」と付いた文章はClaudeが自動生成したものであり、
-    公式発表やWiki編集者の見解ではありません。詳細は必ずリンク先でご確認ください。
+    コメント文は自動生成された推測であり、公式発表やWiki編集者の見解ではありません。詳細は必ずリンク先でご確認ください。
   </p>
   <ul>
     ${items || "<li>まだ更新は検知されていません。</li>"}

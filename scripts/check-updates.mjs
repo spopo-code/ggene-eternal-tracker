@@ -12,6 +12,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { generateComment } from "./lib/ai-comment.mjs";
+import { postTweet } from "./lib/x-oauth1.mjs";
 
 const RSS_URL = "https://w.atwiki.jp/ggene_eternal/rss10.xml";
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -60,6 +61,16 @@ function looksLikeMachineOrPatchPage(title) {
   return !noisy.some((kw) => title.includes(kw));
 }
 
+// Xの文字数上限(日本語は実質140字相当)を考慮して組み立てる。
+// リンクはt.co変換で長さに関わらず一定分しかカウントされないが、
+// 安全のためコメント部分は短めに切る。
+function buildTweetText(title, note, link) {
+  const header = `【ジージェネエターナル】「${title}」に更新の動きを検知`;
+  const maxNoteLen = 60;
+  const trimmedNote = note.length > maxNoteLen ? note.slice(0, maxNoteLen) + "…" : note;
+  return `${header}\n${trimmedNote}\n${link}`;
+}
+
 async function main() {
   await mkdir(DATA_DIR, { recursive: true });
 
@@ -68,6 +79,7 @@ async function main() {
 
   const seen = await loadJson(SEEN_PATH, {}); // link -> last known date
   const updates = await loadJson(UPDATES_PATH, []); // append-only log
+  const isFirstRun = Object.keys(seen).length === 0;
 
   const newlyChanged = [];
   for (const item of items) {
@@ -91,6 +103,14 @@ async function main() {
         detectedAt: now,
         note,
       });
+
+      // 初回実行(=まだ何も記録がない状態)は、Wikiの過去分がまとめて
+      // "新規"扱いになるだけなので、ここでツイートすると大量投稿になってしまう。
+      // 2回目以降の、本当に新しい変化のときだけ投稿する。
+      if (!isFirstRun) {
+        const tweetText = buildTweetText(item.title, note, item.link);
+        await postTweet(tweetText);
+      }
     }
     // 直近500件だけ保持
     updates.length = Math.min(updates.length, 500);

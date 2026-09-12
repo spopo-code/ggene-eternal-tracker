@@ -23,7 +23,8 @@
 3. Settings → Pages → Source を **GitHub Actions** に変更。
 4. (任意・後回しでOK) Settings → Secrets and variables → Actions で以下を登録:
    - `ANTHROPIC_API_KEY` … Claude APIキー。未設定でも動く(定型文にフォールバック)。
-   - `X_BEARER_TOKEN` … 下記の手順で取得。未設定ならX連携だけスキップされ、Wiki監視は通常通り動く。
+   - `X_BEARER_TOKEN` … 公式Xの読み取り用。未設定ならX連携だけスキップされ、Wiki監視は通常通り動く。
+   - `X_API_KEY` / `X_API_KEY_SECRET` / `X_ACCESS_TOKEN` / `X_ACCESS_TOKEN_SECRET` … 自分のXアカウントでツイート投稿するための書き込み用。未設定ならツイート投稿だけスキップされる。
 5. Actionsタブから `Check updates and deploy` を手動実行(workflow_dispatch)。
 6. 以降は3時間おきに自動実行される。
 
@@ -36,6 +37,20 @@
 
 コストが気になる場合は `.github/workflows/check-and-deploy.yml` の
 `cron` を `0 */6 * * *`(6時間おき)などに緩めれば読み取り回数を減らせます。
+
+## 自分のXアカウントで自動ツイートするための設定(X_API_KEY等)
+
+Wiki更新を検知したとき、あなたのXアカウントから自動でツイートするための設定。
+(初回実行時は過去分がまとめて検知されるだけなので、ツイートは飛びません。2回目以降の本当の新着だけ投稿されます)
+
+1. https://developer.x.com/ でAppを作成(読み取り用のBearer Tokenを取ったのと同じAppでOK)。
+2. Appの設定画面 → **User authentication settings** → Edit → **OAuth 1.0a** を有効化し、
+   App permissions を **Read and write** に設定して保存。
+3. Appの **Keys and tokens** タブを開く:
+   - **API Key と API Key Secret** をコピー → GitHub Secretsに `X_API_KEY` / `X_API_KEY_SECRET` として登録
+   - **Access Token and Secret** の欄で「Generate」(または再生成) → 発行された
+     Access Token / Access Token Secret を `X_ACCESS_TOKEN` / `X_ACCESS_TOKEN_SECRET` として登録
+     (手順2で権限をRead and writeにしてから発行しないと、書き込みできないトークンになるので注意)
 
 ## ローカルで試す
 
