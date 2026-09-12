@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?><rdf:RDF
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel rdf:about="http://w.atwiki.jp/ggene_eternal/">
+    <title>機動戦士ガンダム EXTREME VS.2 INFINITEBOOST wiki</title>
+  </channel>
+  <item rdf:about="https://w.atwiki.jp/ggene_eternal/pages/31.html">
+    <title>雑談・質問/コメントログ</title>
+    <link>https://w.atwiki.jp/ggene_eternal/pages/31.html</link>
+    <dc:date>2026-09-12T10:36:56+09:00</dc:date>
+  </item>
+  <item rdf:about="https://w.atwiki.jp/ggene_eternal/pages/156.html">
+    <title>ガンダムサンドロック改</title>
+    <link>https://w.atwiki.jp/ggene_eternal/pages/156.html</link>
+    <dc:date>2026-09-12T10:35:48+09:00</dc:date>
+  </item>
+  <item rdf:about="https://w.atwiki.jp/ggene_eternal/pages/307.html">
+    <title>ガンダムデスサイズヘル(EW版)</title>
+    <link>https://w.atwiki.jp/ggene_eternal/pages/307.html</link>
+    <dc:date>2026-09-12T10:24:36+09:00</dc:date>
+  </item>
+</rdf:RDF>
