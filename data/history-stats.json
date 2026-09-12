@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-12T11:10:04.259Z",
+  "generatedAt": "2026-09-12T11:36:10.256Z",
   "totalWikiUpdatesTracked": 10,
-  "totalVideosTracked": 0,
+  "totalVideosTracked": 15,
   "wikiUpdateInterval": {
     "averageDays": 51.7,
     "medianDays": 3,
@@ -16,6 +16,6 @@
     0,
     0,
     0,
-    0
+    15
   ]
 }
