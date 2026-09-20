@@ -1,5 +1,19 @@
 [
   {
+    "weekKey": "2026-09-21",
+    "generatedAt": "2026-09-20T15:12:44.723Z",
+    "videoCount": 200,
+    "channelCount": 87,
+    "topChannels": [
+      "Fried potato Great!!!(11本)",
+      "NottinTV(10本)",
+      "ゆきまるのゲームチャンネル(9本)",
+      "ぎゃるそん(8本)",
+      "AZUKIba-(7本)"
+    ],
+    "summary": "今週(直近7日間)は 200本 の関連動画を検知しました(投稿チャンネル数: 87)。"
+  },
+  {
     "weekKey": "2026-09-14",
     "generatedAt": "2026-09-13T15:13:14.535Z",
     "videoCount": 54,
