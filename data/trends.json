@@ -1,5 +1,19 @@
 [
   {
+    "weekKey": "2026-09-28",
+    "generatedAt": "2026-09-27T15:13:09.107Z",
+    "videoCount": 200,
+    "channelCount": 84,
+    "topChannels": [
+      "NottinTV(14本)",
+      "ゆきまるのゲームチャンネル(9本)",
+      "Fried potato Great!!!(8本)",
+      "シャアになれないキヤスバル(8本)",
+      "TATSUYA GAMES(6本)"
+    ],
+    "summary": "今週(直近7日間)は 200本 の関連動画を検知しました(投稿チャンネル数: 84)。"
+  },
+  {
     "weekKey": "2026-09-21",
     "generatedAt": "2026-09-20T15:12:44.723Z",
     "videoCount": 200,
