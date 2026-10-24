@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T10:33:28.505Z",
+  "generatedAt": "2026-10-24T15:36:42.682Z",
   "totalWikiUpdatesTracked": 12,
   "totalVideosTracked": 200,
   "wikiUpdateInterval": {
@@ -8,7 +8,7 @@
     "sampleSize": 11
   },
   "gachaUpdateInterval": {
-    "averageDays": 0.2,
+    "averageDays": 0.3,
     "medianDays": 0.1,
     "sampleSize": 26
   },
