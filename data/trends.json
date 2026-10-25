@@ -1,5 +1,19 @@
 [
   {
+    "weekKey": "2026-10-26",
+    "generatedAt": "2026-10-25T15:47:22.279Z",
+    "videoCount": 200,
+    "channelCount": 83,
+    "topChannels": [
+      "NottinTV(13本)",
+      "ゆきまるのゲームチャンネル(12本)",
+      "moeXchan (GAMES)(7本)",
+      "ぎゃるそん(7本)",
+      "AZUKIba-(7本)"
+    ],
+    "summary": "今週(直近7日間)は 200本 の関連動画を検知しました(投稿チャンネル数: 83)。"
+  },
+  {
     "weekKey": "2026-10-19",
     "generatedAt": "2026-10-18T15:35:16.494Z",
     "videoCount": 200,
