@@ -1,5 +1,19 @@
 [
   {
+    "weekKey": "2026-11-09",
+    "generatedAt": "2026-11-08T19:25:11.464Z",
+    "videoCount": 199,
+    "channelCount": 74,
+    "topChannels": [
+      "NottinTV(13本)",
+      "YURENO_CHANNEL(10本)",
+      "ぜろチュー(8本)",
+      "ゆきまるのゲームチャンネル(8本)",
+      "ハロ少尉(8本)"
+    ],
+    "summary": "今週(直近7日間)は 199本 の関連動画を検知しました(投稿チャンネル数: 74)。"
+  },
+  {
     "weekKey": "2026-11-02",
     "generatedAt": "2026-11-01T19:25:29.201Z",
     "videoCount": 200,
