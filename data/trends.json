@@ -1,5 +1,19 @@
 [
   {
+    "weekKey": "2026-11-23",
+    "generatedAt": "2026-11-22T19:13:50.765Z",
+    "videoCount": 200,
+    "channelCount": 77,
+    "topChannels": [
+      "NottinTV(15本)",
+      "Fried potato Great!!!(13本)",
+      "ジージェネ反応ドック(10本)",
+      "TATSUYA GAMES(7本)",
+      "KB963II(7本)"
+    ],
+    "summary": "今週(直近7日間)は 200本 の関連動画を検知しました(投稿チャンネル数: 77)。"
+  },
+  {
     "weekKey": "2026-11-16",
     "generatedAt": "2026-11-15T18:37:58.705Z",
     "videoCount": 198,
